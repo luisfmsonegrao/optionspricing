@@ -13,7 +13,7 @@ pipeline {
                 pwsh(script: """
                     cd binomialoptionspricing/
                     docker images -a
-                    docker built -t jenkins-pipeline
+                    docker build -t jenkins-pipeline
                     docker images -a
                     cd ..
                 """)
