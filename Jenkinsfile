@@ -7,14 +7,16 @@ pipeline {
                 echo "$GIT_BRANCH"
             }
         }
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Goodbye') {
-            steps {
-                echo 'Goodbye World'
+        stage('Docker Build'){
+            steps{
+                pwsh(script: 'docker images -a')
+                pwsh(script: """
+                    cd binomialoptionspricing/
+                    docker images -a
+                    docker built -t jenkins-pipeline
+                    docker images -a
+                    cd ..
+                """)
             }
         }
     }
