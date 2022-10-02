@@ -19,5 +19,10 @@ pipeline {
                 """)
             }
         }
+        stage('Run Tests') {
+            steps {
+                powershell(script: 'docker run jenkins-pipeline')
+            }
+        }
     }
 }
