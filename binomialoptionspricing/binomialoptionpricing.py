@@ -17,7 +17,7 @@ class TestBinomialOptionTreeConstructor(unittest.TestCase):
         self.bot = BinomialOptionTree(self.price, self.strike, self.option_type, self.up_move, self.down_move, self.rate, self.nsteps, self.step)
 
     def test_constructor_price(self):
-        self.assertEqual(self.bot.stock_price, self.strike, "Wrong price!")
+        self.assertEqual(self.bot.stock_price, self.price, "Wrong price!")
 
 
 
