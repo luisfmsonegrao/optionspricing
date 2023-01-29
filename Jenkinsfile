@@ -7,22 +7,5 @@ pipeline {
                 echo "$GIT_BRANCH"
             }
         }
-        stage('Docker Build') {
-            steps {
-                powershell(script: 'docker images -a')
-                powershell(script: """
-                    cd binomialoptionspricing/
-                    docker images -a
-                    docker build -t jenkins-pipeline .
-                    docker images -a
-                    cd ..
-                """)
-            }
-        }
-        stage('Run Tests') {
-            steps {
-                powershell(script: 'docker run jenkins-pipeline')
-            }
-        }
     }
 }
