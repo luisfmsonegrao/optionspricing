@@ -8,7 +8,7 @@ pipeline {
 
             steps {
 
-                echo "$GIT_BRANCH"
+                echo "CUrrent branch is: $GIT_BRANCH"
 
             }
         }
