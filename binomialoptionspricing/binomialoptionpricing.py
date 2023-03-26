@@ -126,5 +126,5 @@ class BinomialOptionTree:
 
 
 if __name__ == "__main__":
-    pass
+    print("Running...")
     #calcular preco de opcoes dado input do utilizador
