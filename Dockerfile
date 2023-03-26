@@ -1,4 +1,4 @@
-FROM 3.10.10-alpine3.17
+FROM 3.10.10-alpine
 
 RUN mkdir -p usr/src/app
 
