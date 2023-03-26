@@ -1,4 +1,4 @@
-FROM 3.10-alpine
+FROM 3.10.10-bullseye
 
 RUN mkdir -p usr/src/app
 
