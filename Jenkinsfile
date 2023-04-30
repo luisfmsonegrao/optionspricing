@@ -17,6 +17,7 @@ pipeline {
 
             steps {
                 powershell 'docker images ls'
+                powershell 'docker build -t lfmsonegrao/pipeline-jenkins'
             }
         }
     }
