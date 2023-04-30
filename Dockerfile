@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.10-bullseye
 
 RUN mkdir -p usr/src/app
 
