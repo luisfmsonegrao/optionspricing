@@ -1,4 +1,4 @@
-FROM 3.10.10-bullseye
+FROM 3.10.11-bullseye
 
 RUN mkdir -p usr/src/app
 
