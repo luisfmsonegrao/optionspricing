@@ -1,7 +1,6 @@
 import math
 import unittest
 import numpy as np
-import unittest as ut
 
 class TestBinomialOptionTreeConstructor(unittest.TestCase):
     
