@@ -20,5 +20,12 @@ pipeline {
                 powershell 'docker build -t lfmsonegrao/pipeline-jenkins .'
             }
         }
+
+        stage('Run Tests') {
+
+            steps {
+                powershell "docker run --name $GIT_BRANCH lfmsonegrao/pipeline-jenkins"
+            }
+        }
     }
 }
