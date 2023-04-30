@@ -16,6 +16,7 @@ pipeline {
         stage('Docker Build') {
 
             steps {
+                pwsh(script: 'docker images -a')
                 pwsh(script: """
                     docker build -t lfmsonegrao/jenkins-pipeline .
                     """
