@@ -6,4 +6,4 @@ COPY . usr/src/app
 
 WORKDIR . usr/src/app
 
-ENTRYPOINT ["python", "binomialoptionspricing/binomialoptionspricing.py"]
+ENTRYPOINT ["python", "binomialoptionspricing/binomialoptionpricing.py"]
