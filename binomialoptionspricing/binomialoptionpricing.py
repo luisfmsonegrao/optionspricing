@@ -1,26 +1,5 @@
 import math
-import unittest
 import numpy as np
-
-class TestBinomialOptionTreeConstructor(unittest.TestCase):
-    
-    def setUp(self):
-        self.price = 100
-        self.strike = 101
-        self.option_type = "Put"
-        self.up_move = 1.1
-        self.down_move = 0.9
-        self.rate = 0.05
-        self.nsteps = 3
-        self.step = 1
-        self.bot = BinomialOptionTree(self.price, self.strike, self.option_type, self.up_move, self.down_move, self.rate, self.nsteps, self.step)
-
-    def test_constructor_price(self):
-        self.assertEqual(self.bot.stock_price, self.strike, "Wrong price!")
-
-
-
-
 
 class BinomialOptionTree:
 
