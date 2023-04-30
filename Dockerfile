@@ -8,4 +8,4 @@ COPY ./binomialoptionspricing usr/src/app
 
 WORKDIR /usr/src/app
 
-ENTRYPOINT ["pytest", "binomialoptionspricing/test.py"]
+ENTRYPOINT ["pytest", "test.py"]
