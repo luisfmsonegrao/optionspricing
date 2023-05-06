@@ -26,12 +26,17 @@ pipeline {
             steps {
                 powershell "docker run --name $GIT_BRANCH lfmsonegrao/pipeline-jenkins"
             }
-        }
-        stage('Docker Teardown') {
-
-            steps {
-                powershell "docker stop $GIT_BRANCH"
-                powershell "docker rm $GIT_BRANCH"
+            post {
+                success {
+                    echo "Test suite passed"
+                }
+                failure {
+                    echo "Test suite failed"
+                }
+                always {
+                    powershell "docker stop $GIT_BRANCH"
+                    powershell "docker rm $GIT_BRANCH"
+                }
             }
         }
     }
