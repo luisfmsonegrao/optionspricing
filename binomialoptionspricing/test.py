@@ -17,7 +17,7 @@ def test_binomial_option_tree_constructor():
 
 def test_calculate_risk_free_probability():
     bop = create_option_tree()
-    assert bop._calculate_risk_free_probability() = bop.risk_free_probability
+    assert bop._calculate_risk_free_probability() == bop.risk_free_probability
 
 
     
