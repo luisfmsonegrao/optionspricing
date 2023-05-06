@@ -9,6 +9,6 @@ def test_binomial_option_tree():
     assert bop1.down_move == 0.99
     assert bop1.rate == 0.05
     assert bop1.n_steps == 4
-    assert bop1.step == 1
+    assert bop1.step == 2
     
 
