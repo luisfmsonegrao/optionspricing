@@ -30,8 +30,8 @@ pipeline {
         stage('Docker Teardown') {
 
             steps {
-                powershell "docker stop --name $GIT_BRANCH"
-                powershell "docker rm --name $GIT_BRANCH"
+                powershell "docker stop $GIT_BRANCH"
+                powershell "docker rm $GIT_BRANCH"
             }
         }
     }
